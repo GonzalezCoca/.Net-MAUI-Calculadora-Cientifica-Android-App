@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.NewPage1"
+             Title="CALCULADORA CIENTÍFICO-INGENIERIL">
+    <VerticalStackLayout VerticalOptions="Center">
+        <Button Text="Calculadora (operaciones básicas)" Clicked="btcalcu" Background="beige" TextColor="Black" FontSize="20" Margin="20" HeightRequest="100"/>
+        <Button Text="Calculadora de Funciones Personalizadas" Clicked="calfunct" Background="beige" TextColor="Black" FontSize="20" Margin="20" HeightRequest="100"/>
+        <Button Text="Firma" Clicked="btfirma" Background="beige" TextColor="Black" FontSize="30" Margin="20" HeightRequest="100"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

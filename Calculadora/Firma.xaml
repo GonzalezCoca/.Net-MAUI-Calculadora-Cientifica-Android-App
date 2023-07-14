@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.Firma"
+             Title="Firma">
+    <VerticalStackLayout>
+        <Image Source="logoesime.png" HeightRequest="200" WidthRequest="200"/>
+        <Label Text = "Gabriel Enrique Gonzalez Coca" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text = "2019300541" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text = "ESIME ZACATENCO (ICE COMPUTACIÓN)" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text = "gonzalezcoca4@gmail.com" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Image Source="imagen.jpg" HeightRequest="200" WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center" Margin="30"/>
+    </VerticalStackLayout>
+</ContentPage>

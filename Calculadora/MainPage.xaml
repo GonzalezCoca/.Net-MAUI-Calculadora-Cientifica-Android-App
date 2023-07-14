@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage"
+             Title="Calculadora"
+             Padding="0"
+             >
+
+    <Grid BackgroundColor="Grey" Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            x:Name="resultado"
+            Grid.Row="0"
+            Grid.ColumnSpan="6"
+            BackgroundColor="Black"
+            FontAttributes="Bold"
+            FontSize="48"
+            HorizontalTextAlignment="End"
+            LineBreakMode="NoWrap"
+            Padding="30"
+            Margin="10"
+            Text="0"
+            TextColor="LightYellow"
+            VerticalTextAlignment="Center"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightYellow"
+            Clicked="limpiar"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="C" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            BackgroundColor="LightYellow"
+            Clicked="raizcubica"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="∛"/>
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="LightYellow"
+            Clicked="potdos"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="x²"/>
+        
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="LightYellow"
+            Clicked="operadorseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="x^n"/>
+        
+        <Button
+            Grid.Row="1"
+            Grid.Column="4"
+            BackgroundColor="LightYellow"
+            Clicked="operadortang"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="tan"/>
+        
+        <Button
+            Grid.Row="1"
+            Grid.Column="5"
+            BackgroundColor="LightYellow"
+            Clicked="pi"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="π"/>
+        
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="LightYellow"
+            Clicked="operadorlogar"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="Log"/>
+       
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="LightYellow"
+            Clicked="logardiez"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="15"
+            Text="Log10"/>
+        
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="LightYellow"
+            Clicked="senohiper"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="sinh"/>
+        
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="LightYellow"
+            Clicked="cosenohiper"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="cosh"/>
+        
+        <Button
+            Grid.Row="2"
+            Grid.Column="4"
+            BackgroundColor="LightYellow"
+            Clicked="tanhiper"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="tanh"/>
+        
+        <Button
+            Grid.Row="2"
+            Grid.Column="5"
+            BackgroundColor="LightYellow"
+            Clicked="raizcuadrada"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="√"/>
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="7"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="8"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="9"/>
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="4"/>
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="5"/>
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="6"/>
+        <Button
+            Grid.Row="6"
+            Grid.Column="0"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="1"/>
+        <Button
+            Grid.Row="6"
+            Grid.Column="1"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="2"/>
+        <Button
+            Grid.Row="6"
+            Grid.Column="2"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="3"/>
+        <Button
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightGray"
+            Clicked="numeroseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="0"/>
+        
+        <Button
+            Grid.Row="1"
+            Grid.Column="2"
+            BackgroundColor="LightYellow"
+            Clicked="operadorseno"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="sin"/>
+        
+        <Button
+            Grid.Row="1"
+            Grid.Column="3"
+            BackgroundColor="LightYellow"
+            Clicked="operadorcos"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="20"
+            Text="cos"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightYellow"
+            Clicked="operadorseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="/"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightYellow"
+            Clicked="operadorseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="*"/>
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightYellow"
+            Clicked="operadorseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="-"/>
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightYellow"
+            Clicked="operadorseleccionado"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="+"/>
+        <Button
+            Grid.Row="7"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightYellow"
+            Clicked="calcular"
+            CornerRadius="100"
+            BorderWidth="5"
+            FontSize="36"
+            Text="="/>
+    </Grid>
+</ContentPage>
